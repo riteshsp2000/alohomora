@@ -13,13 +13,13 @@ class SplashScreen extends StatelessWidget {
           Transform.translate(
             offset: Offset(65.0, 375.0),
             child: Text(
-              'Wardrobe',
+              'Vocal for Local',
               style: TextStyle(
                 fontFamily: 'SF Pro Display',
-                fontSize: 60,
+                fontSize: 42,
                 color: const Color(0xffffffff),
               ),
-              textAlign: TextAlign.left,
+              textAlign: TextAlign.center,
             ),
           ),
         ],
