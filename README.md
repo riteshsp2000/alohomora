@@ -36,6 +36,8 @@ The past year or so has been very tough for the entire year with Covid-19 ground
 
 ☁️ We also had a discussion regarding whether we should opt for a server or serverless architecture. After a few discussions, we decided on going serverless with Firebase Cloud Functions since we already were heavily relying on other Firebase Products. 
 
+💻 We wanted to build a web app as well but couldn't furnish it so well because of time constraints.
+
 ## Technlogies we used in Alohomora 🖥️✨
 - Flutter for the App.
 - Firebase Firestore as the real-time Database.
