@@ -17,6 +17,7 @@ const Map<String, dynamic> postJson = {
         "socials": {
           "likesCount": 212,
           "commentsCount": 5,
+          "shareCount": 15,
           "comments": [
             {
               "name": "Lalitha Kumar",
@@ -62,6 +63,7 @@ const Map<String, dynamic> postJson = {
         "socials": {
           "likesCount": 467,
           "commentsCount": 3,
+          "shareCount": 7,
           "comments": [
             {
               "name": "Vidya Shree",
@@ -100,6 +102,7 @@ const Map<String, dynamic> postJson = {
         "socials": {
           "likesCount": 467,
           "commentsCount": 3,
+          "shareCount": 3,
           "comments": [
             {
               "name": "Jone Grace",
@@ -139,6 +142,7 @@ const Map<String, dynamic> postJson = {
         "socials": {
           "likesCount": 278,
           "commentsCount": 6,
+          "shareCount": 4,
           "comments": [
             {
               "name": "Jone Grace",
@@ -191,6 +195,7 @@ const Map<String, dynamic> postJson = {
         "socials": {
           "likesCount": 278,
           "commentsCount": 7,
+          "shareCount": 4,
           "comments": [
             {
               "name": "Irene Adler",

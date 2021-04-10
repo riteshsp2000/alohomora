@@ -1,4 +1,5 @@
 import 'package:alohomora/Profile.dart';
+import 'package:alohomora/chatPage.dart';
 import 'package:alohomora/chats.dart';
 import 'package:alohomora/liked.dart';
 import 'package:alohomora/mainscreen.dart';
@@ -23,7 +24,7 @@ class _HomePageState extends State<HomePage> {
           controller: _pageController,
           children: <Widget>[
             MainScreen(),
-            ChatScreen(),
+            ChatList(),
             LikedScreen(),
             Profile()
           ],
@@ -82,7 +83,7 @@ class _HomePageState extends State<HomePage> {
               }),
           IconButton(
               icon: Icon(
-                Icons.search_rounded,
+                Icons.chat,
                 color: Colors.white,
               ),
               onPressed: () {

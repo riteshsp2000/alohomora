@@ -10,12 +10,26 @@ class _ChatScreenState extends State<ChatScreen> {
   String messagetext;
   List<MessageBubble> messages = [
     MessageBubble(
+      isMe: false,
+      text:
+          "I'm interested in this saree. Is this available in a different colour?",
+    ),
+    MessageBubble(
       isMe: true,
-      text: 'Hi',
+      text: 'Yes, we have red, blue and yellow',
     ),
     MessageBubble(
       isMe: false,
-      text: 'Hi',
+      text:
+          "That's great, I'm up for this deal. When would I recieve the product?",
+    ),
+    MessageBubble(
+      isMe: true,
+      text: 'The product will be delivered by monday!',
+    ),
+    MessageBubble(
+      isMe: false,
+      text: "That's an awesome deal! Thank you.",
     )
   ];
   final _textController = TextEditingController();
@@ -31,10 +45,12 @@ class _ChatScreenState extends State<ChatScreen> {
             Icons.arrow_back_ios,
             color: Colors.black,
           ),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
         ),
         title: Text(
-          'Nidhi Chauhan',
+          'Sriram',
           style: TextStyle(
             color: Colors.black,
           ),
@@ -62,10 +78,10 @@ class _ChatScreenState extends State<ChatScreen> {
         children: [
           ListView.builder(
             physics: NeverScrollableScrollPhysics(),
-            reverse: true,
+            // reverse: true,
             itemCount: messages.length,
             shrinkWrap: true,
-            padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 20.0),
+            padding: EdgeInsets.symmetric(vertical: 20.0),
             itemBuilder: (context, index) {
               return Container(
                 padding:

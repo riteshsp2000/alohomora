@@ -37,7 +37,7 @@ class _MainScreenState extends State<MainScreen> {
               children: [
                 index == 0
                     ? Padding(
-                        padding: const EdgeInsets.all(6.0),
+                        padding: const EdgeInsets.all(3.0),
                         child: Column(
                           children: [
                             Stack(children: [
@@ -54,13 +54,17 @@ class _MainScreenState extends State<MainScreen> {
                                             'assets/images/f1.jpeg'))),
                               ),
                               Positioned(
-                                  top: 45,
-                                  left: 45,
-                                  child: Container(
-                                      decoration: BoxDecoration(
-                                          color: Colors.grey.withOpacity(0.6),
-                                          shape: BoxShape.circle),
-                                      child: Icon(Icons.add_rounded)))
+                                top: 45,
+                                left: 45,
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                      color: Colors.grey.withOpacity(0.6),
+                                      shape: BoxShape.circle),
+                                  child: Icon(
+                                    Icons.add_rounded,
+                                  ),
+                                ),
+                              )
                             ]),
                             Center(
                               child: Padding(
@@ -76,15 +80,19 @@ class _MainScreenState extends State<MainScreen> {
                   padding: const EdgeInsets.all(5.0),
                   child: Column(
                     children: [
-                      Container(
-                        width: 70,
-                        height: 70,
-                        decoration: BoxDecoration(
+                      Expanded(
+                        child: Container(
+                          width: 70,
+                          height: 70,
+                          decoration: BoxDecoration(
                             shape: BoxShape.circle,
                             border: Border.all(color: Colors.pink, width: 2),
                             image: DecorationImage(
-                                fit: BoxFit.cover,
-                                image: NetworkImage(story.profile))),
+                              fit: BoxFit.cover,
+                              image: NetworkImage(story.profile),
+                            ),
+                          ),
+                        ),
                       ),
                       Padding(
                         padding: const EdgeInsets.only(top: 6.0),
@@ -209,8 +217,17 @@ class _MainScreenState extends State<MainScreen> {
                           ),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child:
+                            child: Column(
+                              children: [
                                 Icon(LineIcons.paperPlane, color: Colors.grey),
+                                Text(
+                                  post.shares.toString(),
+                                  style: TextStyle(
+                                    color: Colors.grey,
+                                  ),
+                                ),
+                              ],
+                            ),
                           )
                         ],
                       ),
