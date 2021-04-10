@@ -1,3 +1,5 @@
+import 'package:alohomora/data/posts.dart';
+import 'package:alohomora/object%20classes/seller.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:line_icons/line_icons.dart';
@@ -41,8 +43,7 @@ class _MainScreenState extends State<MainScreen> {
                             border: Border.all(color: Colors.pink, width: 2),
                             image: DecorationImage(
                                 fit: BoxFit.cover,
-                                image:
-                                    AssetImage("assets/images/earrings.png"))),
+                                image: AssetImage('assets/images/f1.jpeg'))),
                       ),
                       Positioned(
                           top: 45,
@@ -97,6 +98,7 @@ class _MainScreenState extends State<MainScreen> {
           itemCount: 5,
           scrollDirection: Axis.vertical,
           itemBuilder: (context, index) {
+            Post post = Post(postJson, index);
             return Container(
               padding: EdgeInsets.all(8.0),
               height: 360,
@@ -110,37 +112,34 @@ class _MainScreenState extends State<MainScreen> {
                         height: 40,
                         width: 40,
                         decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: NetworkImage(
+                                  post.profileImage,
+                                ),
+                                fit: BoxFit.fill),
                             shape: BoxShape.circle,
                             border: Border.all(color: Colors.pinkAccent)),
-                        child: CircleAvatar(
-                          child: Image.asset(
-                            "assets/images/earrings.png",
-                            fit: BoxFit.contain,
-                            width: 20,
-                            height: 20,
-                          ),
-                        ),
                       ),
                       Padding(
                         padding: EdgeInsets.symmetric(
                             horizontal: 10.0, vertical: 4.0),
-                        child: Text("Seller 3"),
+                        child: Text(post.name),
                       )
                     ],
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 6.0),
                     child: CarouselSlider(
-                        items: [
-                          ClipRRect(
+                        items: post.images.map((e) {
+                          return ClipRRect(
                             borderRadius: BorderRadius.circular(8.0),
-                            child: Image.asset(
-                              "assets/images/f1.jpeg",
+                            child: Image.network(
+                              e,
                               width: double.infinity,
                               fit: BoxFit.fitWidth,
                             ),
-                          ),
-                        ],
+                          );
+                        }).toList(),
                         options: CarouselOptions(
                           height: 240,
                           viewportFraction: 1,
@@ -164,9 +163,17 @@ class _MainScreenState extends State<MainScreen> {
                           isFavorite
                               ? Padding(
                                   padding: const EdgeInsets.all(8.0),
-                                  child: Icon(
-                                    Icons.favorite_rounded,
-                                    color: const Color(0xfffe4064),
+                                  child: Column(
+                                    children: [
+                                      Icon(
+                                        Icons.favorite_rounded,
+                                        color: const Color(0xfffe4064),
+                                      ),
+                                      Text(
+                                        post.likes.toString(),
+                                        style: TextStyle(color: Colors.grey),
+                                      )
+                                    ],
                                   ),
                                 )
                               : Padding(
@@ -178,9 +185,17 @@ class _MainScreenState extends State<MainScreen> {
                                 ),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child: Icon(
-                              LineIcons.comments,
-                              color: Colors.grey,
+                            child: Column(
+                              children: [
+                                Icon(
+                                  LineIcons.comments,
+                                  color: Colors.grey,
+                                ),
+                                Text(
+                                  post.comments.toString(),
+                                  style: TextStyle(color: Colors.grey),
+                                )
+                              ],
                             ),
                           ),
                           Padding(
@@ -193,7 +208,7 @@ class _MainScreenState extends State<MainScreen> {
                       Row(
                         children: [
                           Text(
-                            "89.00",
+                            post.price.toString(),
                             style: TextStyle(
                                 fontSize: 20,
                                 color: Colors.black.withOpacity(0.8)),

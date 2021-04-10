@@ -1,9 +1,10 @@
-{
+const Map<String, dynamic> postJson = {
   "posts": [
     {
       "seller": {
         "name": "Ritesh Patil",
-        "image": "https://res.cloudinary.com/riteshsp2000/image/upload/hack36/sellers/Screenshot_2021-04-10_at_2.48.27_PM_zglocr.png"
+        "image":
+            "https://res.cloudinary.com/riteshsp2000/image/upload/hack36/sellers/Screenshot_2021-04-10_at_2.48.27_PM_zglocr.png"
       },
       "post": {
         "name": "Platinum Earings",
@@ -27,15 +28,18 @@
             },
             {
               "name": "Vidya Shree",
-              "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              "comment":
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             },
             {
               "name": "Jessica Jones",
-              "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              "comment":
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             },
             {
               "name": "Alisha",
-              "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              "comment":
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             }
           ]
         },
@@ -46,7 +50,8 @@
     {
       "seller": {
         "name": "Astha Nayak",
-        "image": "https://res.cloudinary.com/riteshsp2000/image/upload/hack36/sellers/IMG_20210221_185326_hdh2es.jpg"
+        "image":
+            "https://res.cloudinary.com/riteshsp2000/image/upload/hack36/sellers/IMG_20210221_185326_hdh2es.jpg"
       },
       "post": {
         "name": "Blue Saree",
@@ -60,15 +65,18 @@
           "comments": [
             {
               "name": "Vidya Shree",
-              "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              "comment":
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             },
             {
               "name": "Astha Nayak",
-              "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              "comment":
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             },
             {
               "name": "Molly Hopper",
-              "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              "comment":
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             }
           ]
         },
@@ -79,7 +87,8 @@
     {
       "seller": {
         "name": "Sriram Patibanda",
-        "image": "https://res.cloudinary.com/riteshsp2000/image/upload/hack36/sellers/SriramPatibanda_canjxs.jpg"
+        "image":
+            "https://res.cloudinary.com/riteshsp2000/image/upload/hack36/sellers/SriramPatibanda_canjxs.jpg"
       },
       "post": {
         "name": "Yellow Skirt",
@@ -94,15 +103,18 @@
           "comments": [
             {
               "name": "Jone Grace",
-              "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              "comment":
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             },
             {
               "name": "Sriram Patibanda",
-              "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              "comment":
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             },
             {
               "name": "Irene Adler",
-              "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              "comment":
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             }
           ]
         },
@@ -113,7 +125,8 @@
     {
       "seller": {
         "name": "Astha Nayak",
-        "image": "https://res.cloudinary.com/riteshsp2000/image/upload/hack36/sellers/IMG_20210221_185326_hdh2es.jpg"
+        "image":
+            "https://res.cloudinary.com/riteshsp2000/image/upload/hack36/sellers/IMG_20210221_185326_hdh2es.jpg"
       },
       "post": {
         "name": "Yellow Skirt",
@@ -129,27 +142,33 @@
           "comments": [
             {
               "name": "Jone Grace",
-              "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              "comment":
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             },
             {
               "name": "Astha Nayak",
-              "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              "comment":
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             },
             {
               "name": "Irene Adler",
-              "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              "comment":
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             },
             {
               "name": "Vidya Shree",
-              "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              "comment":
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             },
             {
               "name": "Lalitha Kumar",
-              "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              "comment":
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             },
             {
               "name": "Vidya Shree",
-              "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              "comment":
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             }
           ]
         },
@@ -160,7 +179,8 @@
     {
       "seller": {
         "name": "Ritesh Patil",
-        "image": "https://res.cloudinary.com/riteshsp2000/image/upload/hack36/sellers/Screenshot_2021-04-10_at_2.48.27_PM_zglocr.png"
+        "image":
+            "https://res.cloudinary.com/riteshsp2000/image/upload/hack36/sellers/Screenshot_2021-04-10_at_2.48.27_PM_zglocr.png"
       },
       "post": {
         "name": "Gold Necklace",
@@ -174,31 +194,38 @@
           "comments": [
             {
               "name": "Irene Adler",
-              "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              "comment":
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             },
             {
               "name": "Vidya Shree",
-              "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              "comment":
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             },
             {
               "name": "Lalitha Kumar",
-              "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              "comment":
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             },
             {
               "name": "Vidya Shree",
-              "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              "comment":
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             },
             {
               "name": "Vidya Shree",
-              "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              "comment":
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             },
             {
               "name": "Lalitha Kumar",
-              "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              "comment":
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             },
             {
               "name": "Irene Adler",
-              "comment": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+              "comment":
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             }
           ]
         },
@@ -207,4 +234,4 @@
       }
     }
   ]
-}
+};
