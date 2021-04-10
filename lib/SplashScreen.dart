@@ -1,4 +1,4 @@
-import 'package:alohomora/loginCustomer.dart';
+import 'package:alohomora/signup/loginCustomer.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen extends StatelessWidget {

@@ -1,5 +1,5 @@
 import 'package:alohomora/HomePage.dart';
-import 'package:alohomora/loginCustomer.dart';
+import 'package:alohomora/signup/loginCustomer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 

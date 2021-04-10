@@ -32,7 +32,7 @@ class Profile extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(5.0),
                         image: DecorationImage(
-                          image: const AssetImage(''),
+                          image: const AssetImage('assets/images/earrings.png'),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -51,7 +51,7 @@ class Profile extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(5.0),
                         image: DecorationImage(
-                          image: const AssetImage(''),
+                          image: const AssetImage('assets/images/earrings.png'),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -69,7 +69,7 @@ class Profile extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(5.0),
                         image: DecorationImage(
-                          image: const AssetImage(''),
+                          image: const AssetImage('assets/images/earrings.png'),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -87,7 +87,7 @@ class Profile extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(5.0),
                         image: DecorationImage(
-                          image: const AssetImage(''),
+                          image: const AssetImage('assets/images/earrings.png'),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -105,7 +105,7 @@ class Profile extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(5.0),
                         image: DecorationImage(
-                          image: const AssetImage(''),
+                          image: const AssetImage('assets/images/earrings.png'),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -123,7 +123,7 @@ class Profile extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(5.0),
                         image: DecorationImage(
-                          image: const AssetImage(''),
+                          image: const AssetImage('assets/images/earrings.png'),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -142,7 +142,7 @@ class Profile extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(5.0),
                         image: DecorationImage(
-                          image: const AssetImage(''),
+                          image: const AssetImage('assets/images/earrings.png'),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -161,7 +161,7 @@ class Profile extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(5.0),
                         image: DecorationImage(
-                          image: const AssetImage(''),
+                          image: const AssetImage('assets/images/earrings.png'),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -179,7 +179,7 @@ class Profile extends StatelessWidget {
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(5.0),
                         image: DecorationImage(
-                          image: const AssetImage(''),
+                          image: const AssetImage('assets/images/earrings.png'),
                           fit: BoxFit.cover,
                         ),
                       ),
@@ -460,7 +460,7 @@ class Profile extends StatelessWidget {
                         borderRadius:
                             BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
                         image: DecorationImage(
-                          image: const AssetImage(''),
+                          image: const AssetImage('assets/images/earrings.png'),
                           fit: BoxFit.cover,
                         ),
                         border: Border.all(
