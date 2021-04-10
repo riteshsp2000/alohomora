@@ -2,6 +2,7 @@ import 'package:alohomora/data/posts.dart';
 import 'package:alohomora/data/stories.dart';
 import 'package:alohomora/object%20classes/sellerModel.dart';
 import 'package:alohomora/object%20classes/storyModel.dart';
+import 'package:alohomora/storyview.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:line_icons/line_icons.dart';
@@ -74,25 +75,35 @@ class _MainScreenState extends State<MainScreen> {
                     : Container(),
                 Padding(
                   padding: const EdgeInsets.all(5.0),
-                  child: Column(
-                    children: [
-                      Container(
-                        width: 70,
-                        height: 70,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            border: Border.all(color: Colors.pink, width: 2),
-                            image: DecorationImage(
-                                fit: BoxFit.cover,
-                                image: NetworkImage(story.profile))),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 6.0),
-                        child: Center(
-                          child: Text(story.name),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => StoryViews(
+                                story.image, story.name, story.profile)),
+                      );
+                    },
+                    child: Column(
+                      children: [
+                        Container(
+                          width: 70,
+                          height: 70,
+                          decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              border: Border.all(color: Colors.pink, width: 2),
+                              image: DecorationImage(
+                                  fit: BoxFit.cover,
+                                  image: NetworkImage(story.profile))),
                         ),
-                      )
-                    ],
+                        Padding(
+                          padding: const EdgeInsets.only(top: 6.0),
+                          child: Center(
+                            child: Text(story.name),
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ],

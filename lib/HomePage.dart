@@ -2,6 +2,7 @@ import 'package:alohomora/Profile.dart';
 import 'package:alohomora/chats.dart';
 import 'package:alohomora/liked.dart';
 import 'package:alohomora/mainscreen.dart';
+import 'package:alohomora/signup/addpost.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -98,7 +99,12 @@ class _HomePageState extends State<HomePage> {
                   color: Colors.white,
                   size: 40,
                 ),
-                onPressed: () {}),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => AddPost()),
+                  );
+                }),
           ),
           IconButton(
               icon: Icon(
