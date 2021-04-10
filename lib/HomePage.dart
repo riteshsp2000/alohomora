@@ -1,6 +1,5 @@
 import 'package:alohomora/Profile.dart';
 import 'package:alohomora/chatPage.dart';
-import 'package:alohomora/chats.dart';
 import 'package:alohomora/liked.dart';
 import 'package:alohomora/mainscreen.dart';
 import 'package:alohomora/signup/addpost.dart';

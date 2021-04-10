@@ -1,4 +1,3 @@
-import 'package:alohomora/chats.dart';
 import 'package:alohomora/contacts.dart';
 import 'package:alohomora/data/chatData.dart';
 import 'package:flutter/cupertino.dart';

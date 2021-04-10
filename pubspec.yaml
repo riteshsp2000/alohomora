@@ -25,16 +25,18 @@ dependencies:
     sdk: flutter
   adobe_xd: ^1.1.0+1
   carousel_slider: ^3.0.0
-  cloud_firestore: ^1.0.4
+  # cloud_firestore: ^1.0.4
   cupertino_icons: ^1.0.0
-  firebase: ^9.0.1
-  firebase_auth: ^1.0.3
-  firebase_core: ^1.0.3
-  firebase_messaging: ^9.1.1
+  # firebase: ^9.0.1
+  # firebase_auth: ^1.0.3
+  # firebase_core: ^1.0.3
+  # firebase_messaging: ^9.1.1
   flutter_svg: ^0.19.3
   image_picker: ^0.6.6+5
   line_icons: ^2.0.1
   share: ^2.0.1
+
+  razorpay_flutter: ^1.2.5
   story_view: ^0.12.8
 
 dev_dependencies:
