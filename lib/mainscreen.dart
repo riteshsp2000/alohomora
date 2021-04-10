@@ -4,6 +4,7 @@ import 'package:alohomora/object%20classes/sellerModel.dart';
 import 'package:alohomora/object%20classes/storyModel.dart';
 import 'package:alohomora/payment/paymentFailed.dart';
 import 'package:alohomora/payment/paymentSuccess.dart';
+import 'package:alohomora/storyview.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:line_icons/line_icons.dart';
@@ -41,7 +42,7 @@ class _MainScreenState extends State<MainScreen> {
               children: [
                 index == 0
                     ? Padding(
-                        padding: const EdgeInsets.all(6.0),
+                        padding: const EdgeInsets.all(3.0),
                         child: Column(
                           children: [
                             Stack(children: [
@@ -58,13 +59,17 @@ class _MainScreenState extends State<MainScreen> {
                                             'assets/images/f1.jpeg'))),
                               ),
                               Positioned(
-                                  top: 45,
-                                  left: 45,
-                                  child: Container(
-                                      decoration: BoxDecoration(
-                                          color: Colors.grey.withOpacity(0.6),
-                                          shape: BoxShape.circle),
-                                      child: Icon(Icons.add_rounded)))
+                                top: 45,
+                                left: 45,
+                                child: Container(
+                                  decoration: BoxDecoration(
+                                      color: Colors.grey.withOpacity(0.6),
+                                      shape: BoxShape.circle),
+                                  child: Icon(
+                                    Icons.add_rounded,
+                                  ),
+                                ),
+                              )
                             ]),
                             Center(
                               child: Padding(
@@ -78,25 +83,35 @@ class _MainScreenState extends State<MainScreen> {
                     : Container(),
                 Padding(
                   padding: const EdgeInsets.all(5.0),
-                  child: Column(
-                    children: [
-                      Container(
-                        width: 70,
-                        height: 70,
-                        decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            border: Border.all(color: Colors.pink, width: 2),
-                            image: DecorationImage(
-                                fit: BoxFit.cover,
-                                image: NetworkImage(story.profile))),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 6.0),
-                        child: Center(
-                          child: Text(story.name),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => StoryViews(
+                                story.image, story.name, story.profile)),
+                      );
+                    },
+                    child: Column(
+                      children: [
+                        Container(
+                          width: 70,
+                          height: 70,
+                          decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              border: Border.all(color: Colors.pink, width: 2),
+                              image: DecorationImage(
+                                  fit: BoxFit.cover,
+                                  image: NetworkImage(story.profile))),
                         ),
-                      )
-                    ],
+                        Padding(
+                          padding: const EdgeInsets.only(top: 6.0),
+                          child: Center(
+                            child: Text(story.name),
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ],
@@ -215,8 +230,17 @@ class _MainScreenState extends State<MainScreen> {
                           ),
                           Padding(
                             padding: const EdgeInsets.all(8.0),
-                            child:
+                            child: Column(
+                              children: [
                                 Icon(LineIcons.paperPlane, color: Colors.grey),
+                                Text(
+                                  post.shares.toString(),
+                                  style: TextStyle(
+                                    color: Colors.grey,
+                                  ),
+                                ),
+                              ],
+                            ),
                           )
                         ],
                       ),

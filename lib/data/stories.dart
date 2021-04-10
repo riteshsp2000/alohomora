@@ -15,14 +15,14 @@ const Map<String, dynamic> stroryJSON = {
           "https://res.cloudinary.com/riteshsp2000/image/upload/hack36/products/606fa627-549e-40f7-b5ff-2c806d222bb1_hagx0w.jpg"
     },
     {
-      "seller": "Sriram Patibanda",
+      "seller": "Sriram",
       "displayPicture":
           "https://res.cloudinary.com/riteshsp2000/image/upload/hack36/sellers/SriramPatibanda_canjxs.jpg",
       "image":
           "https://res.cloudinary.com/riteshsp2000/image/upload/hack36/products/90a817f0-193f-4776-a8d5-73bb522381d0_fim4io.jpg"
     },
     {
-      "seller": "Abhibhaw Asthana",
+      "seller": "Abhibhaw",
       "displayPicture":
           "https://res.cloudinary.com/riteshsp2000/image/upload/hack36/sellers/SriramPatibanda_canjxs.jpg",
       "image":

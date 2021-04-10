@@ -32,6 +32,8 @@ dependencies:
   # cloud_firestore: ^1.0.4
   carousel_slider: ^3.0.0
   razorpay_flutter: ^1.2.5
+  story_view: ^0.12.8
+  image_picker: ^0.6.6+5
 
 dev_dependencies:
   flutter_test:
