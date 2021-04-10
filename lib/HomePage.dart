@@ -18,7 +18,6 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       backgroundColor: const Color(0xffffffff),
       bottomNavigationBar: getFooter(),
-      appBar: getAppBar(),
       body: Container(
         child: PageView(
           controller: _pageController,
@@ -45,10 +44,6 @@ class _HomePageState extends State<HomePage> {
           borderRadius: BorderRadius.only(
               bottomLeft: Radius.circular(15.0),
               bottomRight: Radius.circular(15.0))),
-      title: Text(
-        "Vocal for Local",
-        style: TextStyle(color: Colors.white, fontSize: 24),
-      ),
       centerTitle: false,
       actions: [
         Padding(
@@ -107,7 +102,7 @@ class _HomePageState extends State<HomePage> {
           ),
           IconButton(
               icon: Icon(
-                Icons.favorite_rounded,
+                Icons.notifications_active_rounded,
                 color: Colors.white,
               ),
               onPressed: () {

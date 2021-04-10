@@ -11,7 +11,7 @@ class _MainScreenState extends State<MainScreen> {
   bool isFavorite = true;
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SafeArea(
       child: Column(children: [stories(), posts()]),
     );
   }
