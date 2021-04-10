@@ -1,10 +1,7 @@
 import 'package:alohomora/constants.dart';
 import 'package:alohomora/contacts.dart';
 import 'package:alohomora/data/chatData.dart';
-import 'package:alohomora/data/posts.dart';
 import 'package:alohomora/object%20classes/sellerModel.dart';
-import 'package:carousel_slider/carousel_options.dart';
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 
 class Comments extends StatefulWidget {
