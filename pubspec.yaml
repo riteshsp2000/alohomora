@@ -27,6 +27,10 @@ dependencies:
   cupertino_icons: ^1.0.0
   flutter_svg: ^0.19.3
   line_icons: ^2.0.1
+  # firebase_auth: ^1.0.3
+  # firebase_core: ^1.0.3
+  # cloud_firestore: ^1.0.4
+  carousel_slider: ^3.0.0
 
 dev_dependencies:
   flutter_test:
