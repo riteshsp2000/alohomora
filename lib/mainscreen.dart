@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:carousel_slider/carousel_slider.dart';
+import 'package:line_icons/line_icons.dart';
 
 class MainScreen extends StatefulWidget {
   MainScreen({Key key}) : super(key: key);
@@ -19,6 +21,7 @@ class _MainScreenState extends State<MainScreen> {
   Widget stories() {
     return Container(
       height: 120,
+      padding: EdgeInsets.only(top: 20),
       width: double.infinity,
       child: ListView.builder(
           scrollDirection: Axis.horizontal,
@@ -96,7 +99,7 @@ class _MainScreenState extends State<MainScreen> {
           itemBuilder: (context, index) {
             return Container(
               padding: EdgeInsets.all(8.0),
-              height: 250,
+              height: 360,
               width: double.infinity,
               child: Column(
                 children: [
@@ -125,39 +128,81 @@ class _MainScreenState extends State<MainScreen> {
                       )
                     ],
                   ),
-                  Image.asset(
-                    "assets/images/earrings.png",
-                    width: 140,
-                    height: 140,
+                  Padding(
+                    padding: const EdgeInsets.only(top: 6.0),
+                    child: CarouselSlider(
+                        items: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(8.0),
+                            child: Image.asset(
+                              "assets/images/f1.jpeg",
+                              width: double.infinity,
+                              fit: BoxFit.fitWidth,
+                            ),
+                          ),
+                        ],
+                        options: CarouselOptions(
+                          height: 240,
+                          viewportFraction: 1,
+                          initialPage: 0,
+                          enableInfiniteScroll: true,
+                          reverse: false,
+                          autoPlay: false,
+                          autoPlayInterval: Duration(seconds: 3),
+                          autoPlayAnimationDuration:
+                              Duration(milliseconds: 800),
+                          autoPlayCurve: Curves.fastOutSlowIn,
+                          enlargeCenterPage: true,
+                          scrollDirection: Axis.horizontal,
+                        )),
                   ),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      isFavorite
-                          ? Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Icon(
-                                Icons.favorite_rounded,
-                                color: const Color(0xfffe4064),
-                              ),
-                            )
-                          : Padding(
-                              padding: const EdgeInsets.all(8.0),
-                              child: Icon(
-                                Icons.favorite_border_rounded,
-                                color: Colors.grey,
-                              ),
+                      Row(
+                        children: [
+                          isFavorite
+                              ? Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Icon(
+                                    Icons.favorite_rounded,
+                                    color: const Color(0xfffe4064),
+                                  ),
+                                )
+                              : Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Icon(
+                                    Icons.favorite_border_rounded,
+                                    color: Colors.grey,
+                                  ),
+                                ),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Icon(
+                              LineIcons.comments,
+                              color: Colors.grey,
                             ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Icon(
-                          Icons.add_comment_rounded,
-                          color: Colors.grey,
-                        ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child:
+                                Icon(LineIcons.paperPlane, color: Colors.grey),
+                          )
+                        ],
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Icon(Icons.send_rounded, color: Colors.grey),
+                      Row(
+                        children: [
+                          Text(
+                            "89.00",
+                            style: TextStyle(
+                                fontSize: 20,
+                                color: Colors.black.withOpacity(0.8)),
+                          ),
+                          Icon(
+                            LineIcons.indianRupeeSign,
+                            color: Colors.grey,
+                          )
+                        ],
                       )
                     ],
                   )
