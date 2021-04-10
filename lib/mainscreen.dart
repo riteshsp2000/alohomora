@@ -1,3 +1,4 @@
+import 'package:alohomora/comments.dart';
 import 'package:alohomora/data/posts.dart';
 import 'package:alohomora/data/stories.dart';
 import 'package:alohomora/object%20classes/sellerModel.dart';
@@ -6,6 +7,7 @@ import 'package:alohomora/storyview.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:line_icons/line_icons.dart';
+import 'package:share/share.dart';
 
 class MainScreen extends StatefulWidget {
   MainScreen({Key key}) : super(key: key);
@@ -41,32 +43,34 @@ class _MainScreenState extends State<MainScreen> {
                         padding: const EdgeInsets.all(3.0),
                         child: Column(
                           children: [
-                            Stack(children: [
-                              Container(
-                                width: 70,
-                                height: 70,
-                                decoration: BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    border: Border.all(
-                                        color: Colors.pink, width: 2),
-                                    image: DecorationImage(
-                                        fit: BoxFit.cover,
-                                        image: AssetImage(
-                                            'assets/images/f1.jpeg'))),
-                              ),
-                              Positioned(
-                                top: 45,
-                                left: 45,
-                                child: Container(
+                            Stack(
+                              children: [
+                                Container(
+                                  width: 70,
+                                  height: 70,
                                   decoration: BoxDecoration(
-                                      color: Colors.grey.withOpacity(0.6),
-                                      shape: BoxShape.circle),
-                                  child: Icon(
-                                    Icons.add_rounded,
-                                  ),
+                                      shape: BoxShape.circle,
+                                      border: Border.all(
+                                          color: Colors.pink, width: 2),
+                                      image: DecorationImage(
+                                          fit: BoxFit.cover,
+                                          image: AssetImage(
+                                              'assets/images/f1.jpeg'))),
                                 ),
-                              )
-                            ]),
+                                Positioned(
+                                  top: 45,
+                                  left: 45,
+                                  child: Container(
+                                    decoration: BoxDecoration(
+                                        color: Colors.grey.withOpacity(0.6),
+                                        shape: BoxShape.circle),
+                                    child: Icon(
+                                      Icons.add_rounded,
+                                    ),
+                                  ),
+                                )
+                              ],
+                            ),
                             Center(
                               child: Padding(
                                 padding: const EdgeInsets.only(top: 5.0),
@@ -84,8 +88,12 @@ class _MainScreenState extends State<MainScreen> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: (context) => StoryViews(
-                                story.image, story.name, story.profile)),
+                          builder: (context) => StoryViews(
+                            story.image,
+                            story.name,
+                            story.profile,
+                          ),
+                        ),
                       );
                     },
                     child: Column(
@@ -94,11 +102,15 @@ class _MainScreenState extends State<MainScreen> {
                           width: 70,
                           height: 70,
                           decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              border: Border.all(color: Colors.pink, width: 2),
-                              image: DecorationImage(
-                                  fit: BoxFit.cover,
-                                  image: NetworkImage(story.profile))),
+                            shape: BoxShape.circle,
+                            border: Border.all(color: Colors.pink, width: 2),
+                            image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: NetworkImage(
+                                story.profile,
+                              ),
+                            ),
+                          ),
                         ),
                         Padding(
                           padding: const EdgeInsets.only(top: 6.0),
@@ -136,13 +148,16 @@ class _MainScreenState extends State<MainScreen> {
                         height: 40,
                         width: 40,
                         decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image: NetworkImage(
-                                  post.profileImage,
-                                ),
-                                fit: BoxFit.fill),
-                            shape: BoxShape.circle,
-                            border: Border.all(color: Colors.pinkAccent)),
+                          image: DecorationImage(
+                              image: NetworkImage(
+                                post.profileImage,
+                              ),
+                              fit: BoxFit.fill),
+                          shape: BoxShape.circle,
+                          border: Border.all(
+                            color: Colors.pinkAccent,
+                          ),
+                        ),
                       ),
                       Padding(
                         padding: EdgeInsets.symmetric(
@@ -211,9 +226,21 @@ class _MainScreenState extends State<MainScreen> {
                             padding: const EdgeInsets.all(8.0),
                             child: Column(
                               children: [
-                                Icon(
-                                  LineIcons.comments,
-                                  color: Colors.grey,
+                                GestureDetector(
+                                  onTap: () {
+                                    Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                        builder: (context) => Comments(
+                                          post: post,
+                                        ),
+                                      ),
+                                    );
+                                  },
+                                  child: Icon(
+                                    LineIcons.comments,
+                                    color: Colors.grey,
+                                  ),
                                 ),
                                 Text(
                                   post.comments.toString(),
@@ -226,7 +253,16 @@ class _MainScreenState extends State<MainScreen> {
                             padding: const EdgeInsets.all(8.0),
                             child: Column(
                               children: [
-                                Icon(LineIcons.paperPlane, color: Colors.grey),
+                                GestureDetector(
+                                  child: Icon(
+                                    LineIcons.paperPlane,
+                                    color: Colors.grey,
+                                  ),
+                                  onTap: () {
+                                    Share.share(
+                                        'Hey checkout this product by ${post.seller}: ${post.images[0]} - ${post.name}');
+                                  },
+                                ),
                                 Text(
                                   post.shares.toString(),
                                   style: TextStyle(
