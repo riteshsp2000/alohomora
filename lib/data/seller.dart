@@ -3,7 +3,7 @@ const Map<String, dynamic> profileJSON = {
   "description":
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   "image":
-      "https://res.cloudinary.com/riteshsp2000/image/upload/sellers/IMG_20210221_185326_hdh2es.jpg",
+      "https://res.cloudinary.com/riteshsp2000/image/upload/hack36/sellers/IMG_20210221_185326_hdh2es.jpg",
   "location": "Rourkela, India",
   "socials": {"followers": "90k", "following": "231", "posts": "21"},
   "posts": [
@@ -11,78 +11,57 @@ const Map<String, dynamic> profileJSON = {
       "name": "Black Saree",
       "description":
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "image": [
-        "https://res.cloudinary.com/riteshsp2000/image/upload/hack36/products/a96db0db-64e3-44d4-836b-b1107d0cf655_zisjzq.jpg",
-        "https://res.cloudinary.com/riteshsp2000/image/upload/hack36/products/794ca3ce-6771-4371-a9ec-1eff50dbffcb_qmhqe9.jpg"
-      ]
+      "image":
+          "https://res.cloudinary.com/riteshsp2000/image/upload/hack36/products/a96db0db-64e3-44d4-836b-b1107d0cf655_zisjzq.jpg",
     },
     {
       "name": "White T-Shirt",
       "description":
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "image": [
-        "https://res.cloudinary.com/riteshsp2000/image/upload/hack36/products/01bf53af-ce2e-46ad-8099-39fbe206466c_spymri.jpg",
-        "https://res.cloudinary.com/riteshsp2000/image/upload/hack36/products/d3d6ba28-bdb3-40ca-823b-6b9e71c49ebb_bwfhz5.jpg"
-      ]
+      "image":
+          "https://res.cloudinary.com/riteshsp2000/image/upload/hack36/products/01bf53af-ce2e-46ad-8099-39fbe206466c_spymri.jpg",
     },
     {
       "name": "Gold Necklace",
       "description":
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "image": [
-        "https://res.cloudinary.com/riteshsp2000/image/upload/hack36/products/30e9b777-a350-4a95-8ae3-fa6a00d33ade_s1lit8.jpg",
-        "https://res.cloudinary.com/riteshsp2000/image/upload/hack36/products/9ed8b2e8-683b-4b1e-b9aa-13db1b1b1a75_la6xsj.jpg"
-      ]
+      "image":
+          "https://res.cloudinary.com/riteshsp2000/image/upload/hack36/products/30e9b777-a350-4a95-8ae3-fa6a00d33ade_s1lit8.jpg",
     },
     {
       "name": "Grey Saree",
       "description":
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "image": [
-        "https://res.cloudinary.com/riteshsp2000/image/upload/hack36/products/6adb6e7d-df21-4b77-8ad6-b1dbd562b66c_stmh8x.jpg",
-        "https://res.cloudinary.com/riteshsp2000/image/upload/hack36/products/6c55e236-dfed-4cf8-a303-7086ade717c3_cichof.jpg",
-        "https://res.cloudinary.com/riteshsp2000/image/upload/hack36/products/4d5f258a-6bfd-4800-9f6c-eb5e7cab135c_yjeo29.jpg",
-        "https://res.cloudinary.com/riteshsp2000/image/upload/hack36/products/e0229b8c-00e6-4552-be2c-13b115e092f6_yvhxa4.jpg"
-      ]
+      "image":
+          "https://res.cloudinary.com/riteshsp2000/image/upload/hack36/products/6adb6e7d-df21-4b77-8ad6-b1dbd562b66c_stmh8x.jpg",
     },
     {
       "name": "Silver Earrings",
       "description":
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "image": [
-        "https://res.cloudinary.com/riteshsp2000/image/upload/hack36/products/955c871c-161e-40e7-a42b-6e9cf0b2186d_zt7whq.jpg",
-        "https://res.cloudinary.com/riteshsp2000/image/upload/hack36/products/289001a9-a4f6-452e-b54e-3a3ec2520a38_lhgfae.jpg",
-        "https://res.cloudinary.com/riteshsp2000/image/upload/hack36/products/df8d25cd-23d6-400e-abee-0240ee04507c_gyxa8k.jpg",
-        "https://res.cloudinary.com/riteshsp2000/image/upload/hack36/products/68449ae7-8a37-495a-b996-75eeb111dc93_arwpqr.jpg"
-      ]
+      "image":
+          "https://res.cloudinary.com/riteshsp2000/image/upload/hack36/products/68449ae7-8a37-495a-b996-75eeb111dc93_arwpqr.jpg"
     },
     {
       "name": "Yellow Skirt",
       "description":
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "image": [
-        "https://res.cloudinary.com/riteshsp2000/image/upload/hack36/products/609e447d-1a4c-477f-8edb-03268b98d0ba_isy3jb.jpg",
-        "https://res.cloudinary.com/riteshsp2000/image/upload/hack36/products/9e04fb1e-7191-4160-bfab-c6756f57a9bd_ng88i3.jpg",
-        "https://res.cloudinary.com/riteshsp2000/image/upload/hack36/products/520c3c9e-f2d7-421f-803a-d95d7516c0bc_x3ce8h.jpg"
-      ]
+      "image":
+          "https://res.cloudinary.com/riteshsp2000/image/upload/hack36/products/520c3c9e-f2d7-421f-803a-d95d7516c0bc_x3ce8h.jpg"
     },
     {
       "name": "Blue Saree",
       "description":
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "image": [
-        "https://res.cloudinary.com/riteshsp2000/image/upload/hack36/products/606fa627-549e-40f7-b5ff-2c806d222bb1_hagx0w.jpg",
-        "https://res.cloudinary.com/riteshsp2000/image/upload/hack36/products/86a72a9b-df38-4260-bcff-1fe32271d4fb_j7yqgt.jpg"
-      ]
+      "image":
+          "https://res.cloudinary.com/riteshsp2000/image/upload/hack36/products/606fa627-549e-40f7-b5ff-2c806d222bb1_hagx0w.jpg",
     },
     {
       "name": "Necklace Set",
       "description":
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "image": [
-        "https://res.cloudinary.com/riteshsp2000/image/upload/hack36/products/90a817f0-193f-4776-a8d5-73bb522381d0_fim4io.jpg",
-        "https://res.cloudinary.com/riteshsp2000/image/upload/hack36/products/1d4352f1-001a-4580-a6b8-73580eb0b605_bzqxqd.jpg"
-      ]
+      "image":
+          "https://res.cloudinary.com/riteshsp2000/image/upload/hack36/products/90a817f0-193f-4776-a8d5-73bb522381d0_fim4io.jpg",
     }
   ]
 };

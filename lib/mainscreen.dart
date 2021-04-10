@@ -1,5 +1,7 @@
 import 'package:alohomora/data/posts.dart';
-import 'package:alohomora/object%20classes/seller.dart';
+import 'package:alohomora/data/stories.dart';
+import 'package:alohomora/object%20classes/sellerModel.dart';
+import 'package:alohomora/object%20classes/storyModel.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:line_icons/line_icons.dart';
@@ -27,14 +29,53 @@ class _MainScreenState extends State<MainScreen> {
       width: double.infinity,
       child: ListView.builder(
           scrollDirection: Axis.horizontal,
-          itemCount: 20,
+          itemCount: 4,
           itemBuilder: (context, index) {
-            if (index == 0) {
-              return Padding(
-                padding: const EdgeInsets.all(6.0),
-                child: Column(
-                  children: [
-                    Stack(children: [
+            Story story = Story(stroryJSON, index);
+
+            return Row(
+              children: [
+                index == 0
+                    ? Padding(
+                        padding: const EdgeInsets.all(6.0),
+                        child: Column(
+                          children: [
+                            Stack(children: [
+                              Container(
+                                width: 70,
+                                height: 70,
+                                decoration: BoxDecoration(
+                                    shape: BoxShape.circle,
+                                    border: Border.all(
+                                        color: Colors.pink, width: 2),
+                                    image: DecorationImage(
+                                        fit: BoxFit.cover,
+                                        image: AssetImage(
+                                            'assets/images/f1.jpeg'))),
+                              ),
+                              Positioned(
+                                  top: 45,
+                                  left: 45,
+                                  child: Container(
+                                      decoration: BoxDecoration(
+                                          color: Colors.grey.withOpacity(0.6),
+                                          shape: BoxShape.circle),
+                                      child: Icon(Icons.add_rounded)))
+                            ]),
+                            Center(
+                              child: Padding(
+                                padding: const EdgeInsets.only(top: 5.0),
+                                child: Text("Me"),
+                              ),
+                            )
+                          ],
+                        ),
+                      )
+                    : Container(),
+                Padding(
+                  padding: const EdgeInsets.all(5.0),
+                  child: Column(
+                    children: [
                       Container(
                         width: 70,
                         height: 70,
@@ -43,51 +84,19 @@ class _MainScreenState extends State<MainScreen> {
                             border: Border.all(color: Colors.pink, width: 2),
                             image: DecorationImage(
                                 fit: BoxFit.cover,
-                                image: AssetImage('assets/images/f1.jpeg'))),
+                                image: NetworkImage(story.profile))),
                       ),
-                      Positioned(
-                          top: 45,
-                          left: 45,
-                          child: Container(
-                              decoration: BoxDecoration(
-                                  color: Colors.grey.withOpacity(0.6),
-                                  shape: BoxShape.circle),
-                              child: Icon(Icons.add_rounded)))
-                    ]),
-                    Center(
-                      child: Padding(
-                        padding: const EdgeInsets.only(top: 5.0),
-                        child: Text("Me"),
-                      ),
-                    )
-                  ],
+                      Padding(
+                        padding: const EdgeInsets.only(top: 6.0),
+                        child: Center(
+                          child: Text(story.name),
+                        ),
+                      )
+                    ],
+                  ),
                 ),
-              );
-            } else {
-              return Padding(
-                padding: const EdgeInsets.all(5.0),
-                child: Column(
-                  children: [
-                    Container(
-                      width: 70,
-                      height: 70,
-                      decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          border: Border.all(color: Colors.pink, width: 2),
-                          image: DecorationImage(
-                              fit: BoxFit.cover,
-                              image: AssetImage("assets/images/fashion.png"))),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 6.0),
-                      child: Center(
-                        child: Text("Seller " + index.toString()),
-                      ),
-                    )
-                  ],
-                ),
-              );
-            }
+              ],
+            );
           }),
     );
   }

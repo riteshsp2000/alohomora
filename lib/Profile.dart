@@ -1,3 +1,4 @@
+import 'package:alohomora/data/seller.dart';
 import 'package:flutter/material.dart';
 import 'package:adobe_xd/pinned.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -10,552 +11,563 @@ class Profile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xfffafafa),
-      body: Stack(
-        children: <Widget>[
-          Transform.translate(
-            offset: Offset(18.0, 331.0),
-            child: SizedBox(
-              width: 338.0,
-              height: 454.0,
-              child: Stack(
-                children: <Widget>[
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(0.0, 0.0, 106.0, 106.0),
-                    size: Size(338.0, 454.0),
-                    pinLeft: true,
-                    pinTop: true,
-                    fixedWidth: true,
-                    fixedHeight: true,
-                    child:
-                        // Adobe XD layer: '21' (shape)
-                        Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5.0),
-                        image: DecorationImage(
-                          image: const AssetImage('assets/images/earrings.png'),
-                          fit: BoxFit.cover,
+      body: SingleChildScrollView(
+        child: Stack(
+          children: <Widget>[
+            Transform.translate(
+              offset: Offset(18.0, 331.0),
+              child: SizedBox(
+                width: 338.0,
+                height: 454.0,
+                child: Stack(
+                  children: <Widget>[
+                    Pinned.fromSize(
+                      bounds: Rect.fromLTWH(0.0, 0.0, 106.0, 106.0),
+                      size: Size(338.0, 454.0),
+                      pinLeft: true,
+                      pinTop: true,
+                      fixedWidth: true,
+                      fixedHeight: true,
+                      child:
+                          // Adobe XD layer: '21' (shape)
+                          Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5.0),
+                          image: DecorationImage(
+                            image:
+                                NetworkImage(profileJSON['posts'][0]['image']),
+                            fit: BoxFit.cover,
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(0.0, 348.0, 106.0, 106.0),
-                    size: Size(338.0, 454.0),
-                    pinLeft: true,
-                    pinBottom: true,
-                    fixedWidth: true,
-                    fixedHeight: true,
-                    child:
-                        // Adobe XD layer: '12' (shape)
-                        Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5.0),
-                        image: DecorationImage(
-                          image: const AssetImage('assets/images/earrings.png'),
-                          fit: BoxFit.cover,
+                    Pinned.fromSize(
+                      bounds: Rect.fromLTWH(0.0, 348.0, 106.0, 106.0),
+                      size: Size(338.0, 454.0),
+                      pinLeft: true,
+                      pinBottom: true,
+                      fixedWidth: true,
+                      fixedHeight: true,
+                      child:
+                          // Adobe XD layer: '12' (shape)
+                          Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5.0),
+                          image: DecorationImage(
+                            image:
+                                NetworkImage(profileJSON['posts'][1]['image']),
+                            fit: BoxFit.cover,
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(0.0, 116.0, 106.0, 106.0),
-                    size: Size(338.0, 454.0),
-                    pinLeft: true,
-                    fixedWidth: true,
-                    fixedHeight: true,
-                    child:
-                        // Adobe XD layer: '45' (shape)
-                        Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5.0),
-                        image: DecorationImage(
-                          image: const AssetImage('assets/images/earrings.png'),
-                          fit: BoxFit.cover,
+                    Pinned.fromSize(
+                      bounds: Rect.fromLTWH(0.0, 116.0, 106.0, 106.0),
+                      size: Size(338.0, 454.0),
+                      pinLeft: true,
+                      fixedWidth: true,
+                      fixedHeight: true,
+                      child:
+                          // Adobe XD layer: '45' (shape)
+                          Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5.0),
+                          image: DecorationImage(
+                            image:
+                                NetworkImage(profileJSON['posts'][2]['image']),
+                            fit: BoxFit.cover,
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(0.0, 232.0, 106.0, 106.0),
-                    size: Size(338.0, 454.0),
-                    pinLeft: true,
-                    fixedWidth: true,
-                    fixedHeight: true,
-                    child:
-                        // Adobe XD layer: '45' (shape)
-                        Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5.0),
-                        image: DecorationImage(
-                          image: const AssetImage('assets/images/earrings.png'),
-                          fit: BoxFit.cover,
+                    Pinned.fromSize(
+                      bounds: Rect.fromLTWH(0.0, 232.0, 106.0, 106.0),
+                      size: Size(338.0, 454.0),
+                      pinLeft: true,
+                      fixedWidth: true,
+                      fixedHeight: true,
+                      child:
+                          // Adobe XD layer: '45' (shape)
+                          Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5.0),
+                          image: DecorationImage(
+                            image:
+                                NetworkImage(profileJSON['posts'][3]['image']),
+                            fit: BoxFit.cover,
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(116.5, 0.0, 106.0, 106.0),
-                    size: Size(338.0, 454.0),
-                    pinTop: true,
-                    fixedWidth: true,
-                    fixedHeight: true,
-                    child:
-                        // Adobe XD layer: '45' (shape)
-                        Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5.0),
-                        image: DecorationImage(
-                          image: const AssetImage('assets/images/earrings.png'),
-                          fit: BoxFit.cover,
+                    Pinned.fromSize(
+                      bounds: Rect.fromLTWH(116.5, 0.0, 106.0, 106.0),
+                      size: Size(338.0, 454.0),
+                      pinTop: true,
+                      fixedWidth: true,
+                      fixedHeight: true,
+                      child:
+                          // Adobe XD layer: '45' (shape)
+                          Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5.0),
+                          image: DecorationImage(
+                            image:
+                                NetworkImage(profileJSON['posts'][4]['image']),
+                            fit: BoxFit.cover,
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(116.5, 348.0, 106.0, 106.0),
-                    size: Size(338.0, 454.0),
-                    pinBottom: true,
-                    fixedWidth: true,
-                    fixedHeight: true,
-                    child:
-                        // Adobe XD layer: '45' (shape)
-                        Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5.0),
-                        image: DecorationImage(
-                          image: const AssetImage('assets/images/earrings.png'),
-                          fit: BoxFit.cover,
+                    Pinned.fromSize(
+                      bounds: Rect.fromLTWH(116.5, 348.0, 106.0, 106.0),
+                      size: Size(338.0, 454.0),
+                      pinBottom: true,
+                      fixedWidth: true,
+                      fixedHeight: true,
+                      child:
+                          // Adobe XD layer: '45' (shape)
+                          Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5.0),
+                          image: DecorationImage(
+                            image:
+                                NetworkImage(profileJSON['posts'][5]['image']),
+                            fit: BoxFit.cover,
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(232.0, 0.0, 106.0, 106.0),
-                    size: Size(338.0, 454.0),
-                    pinRight: true,
-                    pinTop: true,
-                    fixedWidth: true,
-                    fixedHeight: true,
-                    child:
-                        // Adobe XD layer: '78' (shape)
-                        Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5.0),
-                        image: DecorationImage(
-                          image: const AssetImage('assets/images/earrings.png'),
-                          fit: BoxFit.cover,
+                    Pinned.fromSize(
+                      bounds: Rect.fromLTWH(232.0, 0.0, 106.0, 106.0),
+                      size: Size(338.0, 454.0),
+                      pinRight: true,
+                      pinTop: true,
+                      fixedWidth: true,
+                      fixedHeight: true,
+                      child:
+                          // Adobe XD layer: '78' (shape)
+                          Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5.0),
+                          image: DecorationImage(
+                            image:
+                                NetworkImage(profileJSON['posts'][6]['image']),
+                            fit: BoxFit.cover,
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(232.0, 348.0, 106.0, 106.0),
-                    size: Size(338.0, 454.0),
-                    pinRight: true,
-                    pinBottom: true,
-                    fixedWidth: true,
-                    fixedHeight: true,
-                    child:
-                        // Adobe XD layer: '45' (shape)
-                        Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5.0),
-                        image: DecorationImage(
-                          image: const AssetImage('assets/images/earrings.png'),
-                          fit: BoxFit.cover,
+                    Pinned.fromSize(
+                      bounds: Rect.fromLTWH(232.0, 348.0, 106.0, 106.0),
+                      size: Size(338.0, 454.0),
+                      pinRight: true,
+                      pinBottom: true,
+                      fixedWidth: true,
+                      fixedHeight: true,
+                      child:
+                          // Adobe XD layer: '45' (shape)
+                          Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5.0),
+                          image: DecorationImage(
+                            image:
+                                NetworkImage(profileJSON['posts'][7]['image']),
+                            fit: BoxFit.cover,
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(116.0, 116.0, 222.0, 222.0),
-                    size: Size(338.0, 454.0),
-                    pinRight: true,
-                    fixedWidth: true,
-                    fixedHeight: true,
-                    child:
-                        // Adobe XD layer: '12' (shape)
-                        Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5.0),
-                        image: DecorationImage(
-                          image: const AssetImage('assets/images/earrings.png'),
-                          fit: BoxFit.cover,
+                    Pinned.fromSize(
+                      bounds: Rect.fromLTWH(116.0, 116.0, 222.0, 222.0),
+                      size: Size(338.0, 454.0),
+                      pinRight: true,
+                      fixedWidth: true,
+                      fixedHeight: true,
+                      child:
+                          // Adobe XD layer: '12' (shape)
+                          Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5.0),
+                          image: DecorationImage(
+                            image:
+                                NetworkImage(profileJSON['posts'][5]['image']),
+                            fit: BoxFit.cover,
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
-          ),
-          Transform.translate(
-            offset: Offset(36.0, 226.0),
-            child: SizedBox(
-              width: 302.0,
-              height: 71.0,
-              child: Stack(
-                children: <Widget>[
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(0.0, 0.0, 302.0, 71.0),
-                    size: Size(302.0, 71.0),
-                    pinLeft: true,
-                    pinRight: true,
-                    pinTop: true,
-                    pinBottom: true,
-                    child: Container(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(15.0),
-                        color: const Color(0xffffffff),
-                        boxShadow: [
-                          BoxShadow(
-                            color: const Color(0x08000000),
-                            offset: Offset(0, 3),
-                            blurRadius: 36,
+            Transform.translate(
+              offset: Offset(36.0, 226.0),
+              child: SizedBox(
+                width: 302.0,
+                height: 71.0,
+                child: Stack(
+                  children: <Widget>[
+                    Pinned.fromSize(
+                      bounds: Rect.fromLTWH(0.0, 0.0, 302.0, 71.0),
+                      size: Size(302.0, 71.0),
+                      pinLeft: true,
+                      pinRight: true,
+                      pinTop: true,
+                      pinBottom: true,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(15.0),
+                          color: const Color(0xffffffff),
+                          boxShadow: [
+                            BoxShadow(
+                              color: const Color(0x08000000),
+                              offset: Offset(0, 3),
+                              blurRadius: 36,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                    Pinned.fromSize(
+                      bounds: Rect.fromLTWH(26.0, 17.0, 253.0, 39.0),
+                      size: Size(302.0, 71.0),
+                      pinLeft: true,
+                      pinRight: true,
+                      fixedHeight: true,
+                      child: Stack(
+                        children: <Widget>[
+                          Pinned.fromSize(
+                            bounds: Rect.fromLTWH(0.0, 0.0, 35.0, 39.0),
+                            size: Size(253.0, 39.0),
+                            pinLeft: true,
+                            pinTop: true,
+                            pinBottom: true,
+                            fixedWidth: true,
+                            child: Stack(
+                              children: <Widget>[
+                                Pinned.fromSize(
+                                  bounds: Rect.fromLTWH(0.0, 0.0, 34.0, 20.0),
+                                  size: Size(35.0, 39.0),
+                                  pinLeft: true,
+                                  pinRight: true,
+                                  pinTop: true,
+                                  fixedHeight: true,
+                                  child: Text(
+                                    '12',
+                                    style: TextStyle(
+                                      fontFamily: 'SF Pro Display',
+                                      fontSize: 20,
+                                      color: const Color(0xff1b1b1b),
+                                      fontWeight: FontWeight.w700,
+                                    ),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ),
+                                Pinned.fromSize(
+                                  bounds: Rect.fromLTWH(2.0, 26.0, 33.0, 13.0),
+                                  size: Size(35.0, 39.0),
+                                  pinLeft: true,
+                                  pinRight: true,
+                                  pinBottom: true,
+                                  fixedHeight: true,
+                                  child: Text(
+                                    'Posts',
+                                    style: TextStyle(
+                                      fontFamily: 'SF Pro Display',
+                                      fontSize: 13,
+                                      color: const Color(0x999b9b9b),
+                                    ),
+                                    textAlign: TextAlign.left,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Pinned.fromSize(
+                            bounds: Rect.fromLTWH(100.0, 0.0, 56.0, 39.0),
+                            size: Size(253.0, 39.0),
+                            pinTop: true,
+                            pinBottom: true,
+                            fixedWidth: true,
+                            child: Stack(
+                              children: <Widget>[
+                                Pinned.fromSize(
+                                  bounds: Rect.fromLTWH(1.0, 0.0, 44.0, 20.0),
+                                  size: Size(56.0, 39.0),
+                                  pinLeft: true,
+                                  pinTop: true,
+                                  fixedWidth: true,
+                                  fixedHeight: true,
+                                  child: Text(
+                                    '1.5M',
+                                    style: TextStyle(
+                                      fontFamily: 'SF Pro Display',
+                                      fontSize: 20,
+                                      color: const Color(0xff1b1b1b),
+                                      fontWeight: FontWeight.w700,
+                                    ),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ),
+                                Pinned.fromSize(
+                                  bounds: Rect.fromLTWH(0.0, 26.0, 56.0, 13.0),
+                                  size: Size(56.0, 39.0),
+                                  pinLeft: true,
+                                  pinRight: true,
+                                  pinBottom: true,
+                                  fixedHeight: true,
+                                  child: Text(
+                                    'Followers',
+                                    style: TextStyle(
+                                      fontFamily: 'SF Pro Display',
+                                      fontSize: 13,
+                                      color: const Color(0x999b9b9b),
+                                    ),
+                                    textAlign: TextAlign.left,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Pinned.fromSize(
+                            bounds: Rect.fromLTWH(198.0, 0.0, 55.0, 39.0),
+                            size: Size(253.0, 39.0),
+                            pinRight: true,
+                            pinTop: true,
+                            pinBottom: true,
+                            fixedWidth: true,
+                            child: Stack(
+                              children: <Widget>[
+                                Pinned.fromSize(
+                                  bounds: Rect.fromLTWH(12.0, 0.0, 22.0, 20.0),
+                                  size: Size(55.0, 39.0),
+                                  pinTop: true,
+                                  fixedWidth: true,
+                                  fixedHeight: true,
+                                  child: Text(
+                                    '71',
+                                    style: TextStyle(
+                                      fontFamily: 'SF Pro Display',
+                                      fontSize: 20,
+                                      color: const Color(0xff1b1b1b),
+                                      fontWeight: FontWeight.w700,
+                                    ),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ),
+                                Pinned.fromSize(
+                                  bounds: Rect.fromLTWH(0.0, 26.0, 55.0, 13.0),
+                                  size: Size(55.0, 39.0),
+                                  pinLeft: true,
+                                  pinRight: true,
+                                  pinBottom: true,
+                                  fixedHeight: true,
+                                  child: Text(
+                                    'Following',
+                                    style: TextStyle(
+                                      fontFamily: 'SF Pro Display',
+                                      fontSize: 13,
+                                      color: const Color(0x999b9b9b),
+                                    ),
+                                    textAlign: TextAlign.left,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ],
                       ),
                     ),
-                  ),
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(26.0, 17.0, 253.0, 39.0),
-                    size: Size(302.0, 71.0),
-                    pinLeft: true,
-                    pinRight: true,
-                    fixedHeight: true,
-                    child: Stack(
-                      children: <Widget>[
-                        Pinned.fromSize(
-                          bounds: Rect.fromLTWH(0.0, 0.0, 35.0, 39.0),
-                          size: Size(253.0, 39.0),
-                          pinLeft: true,
-                          pinTop: true,
-                          pinBottom: true,
-                          fixedWidth: true,
-                          child: Stack(
-                            children: <Widget>[
-                              Pinned.fromSize(
-                                bounds: Rect.fromLTWH(0.0, 0.0, 34.0, 20.0),
-                                size: Size(35.0, 39.0),
-                                pinLeft: true,
-                                pinRight: true,
-                                pinTop: true,
-                                fixedHeight: true,
-                                child: Text(
-                                  '109',
-                                  style: TextStyle(
-                                    fontFamily: 'SF Pro Display',
-                                    fontSize: 20,
-                                    color: const Color(0xff1b1b1b),
-                                    fontWeight: FontWeight.w700,
-                                  ),
-                                  textAlign: TextAlign.center,
-                                ),
-                              ),
-                              Pinned.fromSize(
-                                bounds: Rect.fromLTWH(2.0, 26.0, 33.0, 13.0),
-                                size: Size(35.0, 39.0),
-                                pinLeft: true,
-                                pinRight: true,
-                                pinBottom: true,
-                                fixedHeight: true,
-                                child: Text(
-                                  'Posts',
-                                  style: TextStyle(
-                                    fontFamily: 'SF Pro Display',
-                                    fontSize: 13,
-                                    color: const Color(0x999b9b9b),
-                                  ),
-                                  textAlign: TextAlign.left,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Pinned.fromSize(
-                          bounds: Rect.fromLTWH(100.0, 0.0, 56.0, 39.0),
-                          size: Size(253.0, 39.0),
-                          pinTop: true,
-                          pinBottom: true,
-                          fixedWidth: true,
-                          child: Stack(
-                            children: <Widget>[
-                              Pinned.fromSize(
-                                bounds: Rect.fromLTWH(1.0, 0.0, 44.0, 20.0),
-                                size: Size(56.0, 39.0),
-                                pinLeft: true,
-                                pinTop: true,
-                                fixedWidth: true,
-                                fixedHeight: true,
-                                child: Text(
-                                  '1.5M',
-                                  style: TextStyle(
-                                    fontFamily: 'SF Pro Display',
-                                    fontSize: 20,
-                                    color: const Color(0xff1b1b1b),
-                                    fontWeight: FontWeight.w700,
-                                  ),
-                                  textAlign: TextAlign.center,
-                                ),
-                              ),
-                              Pinned.fromSize(
-                                bounds: Rect.fromLTWH(0.0, 26.0, 56.0, 13.0),
-                                size: Size(56.0, 39.0),
-                                pinLeft: true,
-                                pinRight: true,
-                                pinBottom: true,
-                                fixedHeight: true,
-                                child: Text(
-                                  'Followers',
-                                  style: TextStyle(
-                                    fontFamily: 'SF Pro Display',
-                                    fontSize: 13,
-                                    color: const Color(0x999b9b9b),
-                                  ),
-                                  textAlign: TextAlign.left,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Pinned.fromSize(
-                          bounds: Rect.fromLTWH(198.0, 0.0, 55.0, 39.0),
-                          size: Size(253.0, 39.0),
-                          pinRight: true,
-                          pinTop: true,
-                          pinBottom: true,
-                          fixedWidth: true,
-                          child: Stack(
-                            children: <Widget>[
-                              Pinned.fromSize(
-                                bounds: Rect.fromLTWH(12.0, 0.0, 22.0, 20.0),
-                                size: Size(55.0, 39.0),
-                                pinTop: true,
-                                fixedWidth: true,
-                                fixedHeight: true,
-                                child: Text(
-                                  '71',
-                                  style: TextStyle(
-                                    fontFamily: 'SF Pro Display',
-                                    fontSize: 20,
-                                    color: const Color(0xff1b1b1b),
-                                    fontWeight: FontWeight.w700,
-                                  ),
-                                  textAlign: TextAlign.center,
-                                ),
-                              ),
-                              Pinned.fromSize(
-                                bounds: Rect.fromLTWH(0.0, 26.0, 55.0, 13.0),
-                                size: Size(55.0, 39.0),
-                                pinLeft: true,
-                                pinRight: true,
-                                pinBottom: true,
-                                fixedHeight: true,
-                                child: Text(
-                                  'Following',
-                                  style: TextStyle(
-                                    fontFamily: 'SF Pro Display',
-                                    fontSize: 13,
-                                    color: const Color(0x999b9b9b),
-                                  ),
-                                  textAlign: TextAlign.left,
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
-          ),
-          Transform.translate(
-            offset: Offset(168.5, 89.2),
-            child: SizedBox(
-              width: 172.0,
-              height: 97.0,
-              child: Stack(
-                children: <Widget>[
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(0.0, 0.0, 131.0, 21.0),
-                    size: Size(171.5, 96.8),
-                    pinLeft: true,
-                    pinTop: true,
-                    fixedWidth: true,
-                    fixedHeight: true,
-                    child: Text(
-                      'Sanaya Sethi',
-                      style: TextStyle(
-                        fontFamily: 'SF Pro Display',
-                        fontSize: 21,
-                        color: const Color(0xff272727),
-                        fontWeight: FontWeight.w700,
-                        height: 1.2857142857142858,
+            Transform.translate(
+              offset: Offset(168.5, 89.2),
+              child: SizedBox(
+                width: 172.0,
+                height: 97.0,
+                child: Stack(
+                  children: <Widget>[
+                    Pinned.fromSize(
+                      bounds: Rect.fromLTWH(0.0, 0.0, 131.0, 21.0),
+                      size: Size(171.5, 96.8),
+                      pinLeft: true,
+                      pinTop: true,
+                      fixedWidth: true,
+                      fixedHeight: true,
+                      child: Text(
+                        'Sanaya Sethi',
+                        style: TextStyle(
+                          fontFamily: 'SF Pro Display',
+                          fontSize: 21,
+                          color: const Color(0xff272727),
+                          fontWeight: FontWeight.w700,
+                          height: 1.2857142857142858,
+                        ),
+                        textHeightBehavior:
+                            TextHeightBehavior(applyHeightToFirstAscent: false),
+                        textAlign: TextAlign.left,
                       ),
-                      textHeightBehavior:
-                          TextHeightBehavior(applyHeightToFirstAscent: false),
-                      textAlign: TextAlign.left,
                     ),
-                  ),
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(0.0, 24.1, 98.0, 14.0),
-                    size: Size(171.5, 96.8),
-                    pinLeft: true,
-                    fixedWidth: true,
-                    fixedHeight: true,
-                    child: Text(
-                      'Gurgaon, Delhi',
-                      style: TextStyle(
-                        fontFamily: 'SF Pro Display',
-                        fontSize: 14.5,
-                        color: const Color(0xff9b9b9b),
-                        height: 1.8620689655172413,
+                    Pinned.fromSize(
+                      bounds: Rect.fromLTWH(0.0, 24.1, 98.0, 14.0),
+                      size: Size(171.5, 96.8),
+                      pinLeft: true,
+                      fixedWidth: true,
+                      fixedHeight: true,
+                      child: Text(
+                        'Rourkela, Odisha',
+                        style: TextStyle(
+                          fontFamily: 'SF Pro Display',
+                          fontSize: 14.5,
+                          color: const Color(0xff9b9b9b),
+                          height: 1.8620689655172413,
+                        ),
+                        textHeightBehavior:
+                            TextHeightBehavior(applyHeightToFirstAscent: false),
+                        textAlign: TextAlign.left,
                       ),
-                      textHeightBehavior:
-                          TextHeightBehavior(applyHeightToFirstAscent: false),
-                      textAlign: TextAlign.left,
                     ),
-                  ),
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(0.5, 43.8, 171.0, 53.0),
-                    size: Size(171.5, 96.8),
-                    pinLeft: true,
-                    pinRight: true,
-                    pinBottom: true,
-                    fixedHeight: true,
-                    child: Text(
-                      'Rhoncus ipsum eget tempus. Praesent fermentum sa  rhoncus.',
-                      style: TextStyle(
-                        fontFamily: 'SF Pro Display',
-                        fontSize: 10,
-                        color: const Color(0xc79b9b9b),
+                    Pinned.fromSize(
+                      bounds: Rect.fromLTWH(0.5, 43.8, 171.0, 53.0),
+                      size: Size(171.5, 96.8),
+                      pinLeft: true,
+                      pinRight: true,
+                      pinBottom: true,
+                      fixedHeight: true,
+                      child: Text(
+                        'Handmade suits and small jwelleries. We also have online shoping',
+                        style: TextStyle(
+                          fontFamily: 'SF Pro Display',
+                          fontSize: 10,
+                          color: const Color(0xc79b9b9b),
+                        ),
+                        textAlign: TextAlign.left,
                       ),
-                      textAlign: TextAlign.left,
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
-          ),
-          Transform.translate(
-            offset: Offset(28.0, 65.0),
-            child: SizedBox(
-              width: 121.0,
-              height: 136.0,
-              child: Stack(
-                children: <Widget>[
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(0.0, 0.0, 121.0, 121.0),
-                    size: Size(121.0, 136.0),
-                    pinLeft: true,
-                    pinRight: true,
-                    pinTop: true,
-                    pinBottom: true,
-                    child:
-                        // Adobe XD layer: '12' (shape)
-                        Container(
-                      decoration: BoxDecoration(
-                        borderRadius:
-                            BorderRadius.all(Radius.elliptical(9999.0, 9999.0)),
-                        image: DecorationImage(
-                          image: const AssetImage('assets/images/earrings.png'),
-                          fit: BoxFit.cover,
+            Transform.translate(
+              offset: Offset(28.0, 65.0),
+              child: SizedBox(
+                width: 121.0,
+                height: 136.0,
+                child: Stack(
+                  children: <Widget>[
+                    Pinned.fromSize(
+                      bounds: Rect.fromLTWH(0.0, 0.0, 121.0, 121.0),
+                      size: Size(121.0, 136.0),
+                      pinLeft: true,
+                      pinRight: true,
+                      pinTop: true,
+                      pinBottom: true,
+                      child:
+                          // Adobe XD layer: '12' (shape)
+                          Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.all(
+                              Radius.elliptical(9999.0, 9999.0)),
+                          image: DecorationImage(
+                            image: AssetImage('assets/images/f1.jpeg'),
+                            fit: BoxFit.cover,
+                          ),
+                          border: Border.all(
+                              width: 4.0, color: const Color(0xffffffff)),
                         ),
-                        border: Border.all(
-                            width: 4.0, color: const Color(0xffffffff)),
                       ),
                     ),
-                  ),
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(19.0, 112.0, 83.6, 24.0),
-                    size: Size(121.0, 136.0),
-                    pinBottom: true,
-                    fixedWidth: true,
-                    fixedHeight: true,
-                    child: Stack(
-                      children: <Widget>[
-                        Pinned.fromSize(
-                          bounds: Rect.fromLTWH(0.0, 0.0, 83.6, 24.0),
-                          size: Size(83.6, 24.0),
-                          pinLeft: true,
-                          pinRight: true,
-                          pinTop: true,
-                          pinBottom: true,
-                          child: Container(
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(17.0),
-                              gradient: LinearGradient(
-                                begin: Alignment(-0.71, 0.0),
-                                end: Alignment(0.69, 0.0),
-                                colors: [
-                                  const Color(0xfffe407a),
-                                  const Color(0xfffe4064)
-                                ],
-                                stops: [0.0, 1.0],
+                    Pinned.fromSize(
+                      bounds: Rect.fromLTWH(19.0, 112.0, 83.6, 24.0),
+                      size: Size(121.0, 136.0),
+                      pinBottom: true,
+                      fixedWidth: true,
+                      fixedHeight: true,
+                      child: Stack(
+                        children: <Widget>[
+                          Pinned.fromSize(
+                            bounds: Rect.fromLTWH(0.0, 0.0, 83.6, 24.0),
+                            size: Size(83.6, 24.0),
+                            pinLeft: true,
+                            pinRight: true,
+                            pinTop: true,
+                            pinBottom: true,
+                            child: Container(
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(17.0),
+                                gradient: LinearGradient(
+                                  begin: Alignment(-0.71, 0.0),
+                                  end: Alignment(0.69, 0.0),
+                                  colors: [
+                                    const Color(0xfffe407a),
+                                    const Color(0xfffe4064)
+                                  ],
+                                  stops: [0.0, 1.0],
+                                ),
                               ),
                             ),
                           ),
-                        ),
-                        Pinned.fromSize(
-                          bounds: Rect.fromLTWH(16.3, 8.0, 49.8, 7.7),
-                          size: Size(83.6, 24.0),
-                          fixedWidth: true,
-                          fixedHeight: true,
-                          child: SvgPicture.string(
-                            _svg_qhyuow,
-                            allowDrawingOutsideViewBox: true,
-                            fit: BoxFit.fill,
+                          Pinned.fromSize(
+                            bounds: Rect.fromLTWH(16.3, 8.0, 49.8, 7.7),
+                            size: Size(83.6, 24.0),
+                            fixedWidth: true,
+                            fixedHeight: true,
+                            child: SvgPicture.string(
+                              _svg_qhyuow,
+                              allowDrawingOutsideViewBox: true,
+                              fit: BoxFit.fill,
+                            ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
-          ),
-          Transform.translate(
-            offset: Offset(322.7, 56.8),
-            child: SizedBox(
-              width: 25.0,
-              height: 9.0,
-              child: Stack(
-                children: <Widget>[
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(0.0, 0.0, 24.6, 1.0),
-                    size: Size(24.6, 9.0),
-                    pinLeft: true,
-                    pinRight: true,
-                    pinTop: true,
-                    fixedHeight: true,
-                    child: SvgPicture.string(
-                      _svg_qgjq6l,
-                      allowDrawingOutsideViewBox: true,
-                      fit: BoxFit.fill,
+            Transform.translate(
+              offset: Offset(322.7, 56.8),
+              child: SizedBox(
+                width: 25.0,
+                height: 9.0,
+                child: Stack(
+                  children: <Widget>[
+                    Pinned.fromSize(
+                      bounds: Rect.fromLTWH(0.0, 0.0, 24.6, 1.0),
+                      size: Size(24.6, 9.0),
+                      pinLeft: true,
+                      pinRight: true,
+                      pinTop: true,
+                      fixedHeight: true,
+                      child: SvgPicture.string(
+                        _svg_qgjq6l,
+                        allowDrawingOutsideViewBox: true,
+                        fit: BoxFit.fill,
+                      ),
                     ),
-                  ),
-                  Pinned.fromSize(
-                    bounds: Rect.fromLTWH(7.9, 9.0, 16.7, 1.0),
-                    size: Size(24.6, 9.0),
-                    pinRight: true,
-                    pinBottom: true,
-                    fixedWidth: true,
-                    fixedHeight: true,
-                    child: SvgPicture.string(
-                      _svg_c2i3y7,
-                      allowDrawingOutsideViewBox: true,
-                      fit: BoxFit.fill,
+                    Pinned.fromSize(
+                      bounds: Rect.fromLTWH(7.9, 9.0, 16.7, 1.0),
+                      size: Size(24.6, 9.0),
+                      pinRight: true,
+                      pinBottom: true,
+                      fixedWidth: true,
+                      fixedHeight: true,
+                      child: SvgPicture.string(
+                        _svg_c2i3y7,
+                        allowDrawingOutsideViewBox: true,
+                        fit: BoxFit.fill,
+                      ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
-          ),
-          Container(),
-          Container(),
-        ],
+            Container(),
+            Container(),
+          ],
+        ),
       ),
     );
   }
