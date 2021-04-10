@@ -2,9 +2,12 @@ import 'package:alohomora/data/posts.dart';
 import 'package:alohomora/data/stories.dart';
 import 'package:alohomora/object%20classes/sellerModel.dart';
 import 'package:alohomora/object%20classes/storyModel.dart';
+import 'package:alohomora/payment/paymentFailed.dart';
+import 'package:alohomora/payment/paymentSuccess.dart';
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:line_icons/line_icons.dart';
+import 'package:razorpay_flutter/razorpay_flutter.dart';
 
 class MainScreen extends StatefulWidget {
   MainScreen({Key key}) : super(key: key);
@@ -14,6 +17,7 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
+  final _razorpay = Razorpay();
   bool isFavorite = true;
   @override
   Widget build(BuildContext context) {
@@ -114,27 +118,29 @@ class _MainScreenState extends State<MainScreen> {
               width: double.infinity,
               child: Column(
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Container(
-                        height: 40,
-                        width: 40,
-                        decoration: BoxDecoration(
-                            image: DecorationImage(
-                                image: NetworkImage(
-                                  post.profileImage,
-                                ),
-                                fit: BoxFit.fill),
-                            shape: BoxShape.circle,
-                            border: Border.all(color: Colors.pinkAccent)),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.symmetric(
-                            horizontal: 10.0, vertical: 4.0),
-                        child: Text(post.name),
-                      )
-                    ],
+                  Expanded(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        Container(
+                          height: 40,
+                          width: 40,
+                          decoration: BoxDecoration(
+                              image: DecorationImage(
+                                  image: NetworkImage(
+                                    post.profileImage,
+                                  ),
+                                  fit: BoxFit.fill),
+                              shape: BoxShape.circle,
+                              border: Border.all(color: Colors.pinkAccent)),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 10.0, vertical: 4.0),
+                          child: Text(post.name),
+                        )
+                      ],
+                    ),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 6.0),
@@ -214,19 +220,24 @@ class _MainScreenState extends State<MainScreen> {
                           )
                         ],
                       ),
-                      Row(
-                        children: [
-                          Text(
-                            post.price.toString(),
-                            style: TextStyle(
-                                fontSize: 20,
-                                color: Colors.black.withOpacity(0.8)),
-                          ),
-                          Icon(
-                            LineIcons.indianRupeeSign,
-                            color: Colors.grey,
-                          )
-                        ],
+                      GestureDetector(
+                        onTap: () {
+                          getPayment(post.price, post.name);
+                        },
+                        child: Row(
+                          children: [
+                            Text(
+                              post.price.toString(),
+                              style: TextStyle(
+                                  fontSize: 20,
+                                  color: Colors.black.withOpacity(0.8)),
+                            ),
+                            Icon(
+                              LineIcons.indianRupeeSign,
+                              color: Colors.grey,
+                            )
+                          ],
+                        ),
                       )
                     ],
                   )
@@ -235,5 +246,55 @@ class _MainScreenState extends State<MainScreen> {
             );
           }),
     );
+  }
+
+  @override
+  void initState() {
+    super.initState();
+
+    _razorpay.on(Razorpay.EVENT_PAYMENT_SUCCESS, paySuccess);
+    _razorpay.on(Razorpay.EVENT_PAYMENT_ERROR, payError);
+    _razorpay.on(Razorpay.EVENT_EXTERNAL_WALLET, externalWallet);
+  }
+
+  void paySuccess(PaymentSuccessResponse response) {
+    Navigator.pop(context);
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => PaymentSuccess()));
+  }
+
+  void payError(PaymentSuccessResponse response) {
+    Navigator.pop(context);
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => PaymentFailed()));
+  }
+
+  void externalWallet(PaymentSuccessResponse response) {
+    Navigator.pop(context);
+    Navigator.push(
+        context, MaterialPageRoute(builder: (context) => PaymentSuccess()));
+  }
+
+  getPayment(int price, String product) {
+    var options = {
+      'key': 'rzp_test_g6M9OxXWSKS4kH',
+      'amount': price * 100,
+      'name': 'Alohomora',
+      'description': product,
+      'prefill': {'contact': '1234567890', 'email': 'test@gmail.com'}
+    };
+
+    try {
+      _razorpay.open(options);
+    } catch (e) {
+      debugPrint(e);
+    }
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    //Remove Razorpay Listener
+    _razorpay.clear();
   }
 }
